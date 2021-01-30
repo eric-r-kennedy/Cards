@@ -1,0 +1,12 @@
+<h2 class="heading">
+  Deck
+</h2>
+<div class="deck">
+  <span class="card" (click)="draw()" [appCard]="null"></span>
+  <button class="face-down" (click)="drawFacedown()">
+    Face down
+  </button>
+  <button class="to-table" (click)="drawToTable()">
+    To table
+  </button>
+</div>

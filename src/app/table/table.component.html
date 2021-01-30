@@ -1,0 +1,7 @@
+<h2 class="heading"
+  *ngIf="player.table.cards.length">
+  Table
+</h2>
+<div class="table">
+  <span class="card" *ngFor="let card of player.table.cards" (click)="pickUp(card)" [appCard]="card"></span>
+</div>

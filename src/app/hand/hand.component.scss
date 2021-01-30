@@ -1,0 +1,15 @@
+@import "../../variables.scss";
+
+:host {
+  display: block;
+  float: left;
+  width: calc(100% - #{$large-card-width});
+}
+
+.hand {
+  height: $large-card-height;
+  margin: 20px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}

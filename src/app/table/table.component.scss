@@ -1,0 +1,15 @@
+@import "../../variables.scss";
+
+:host {
+  display: block;
+  clear: both;
+}
+
+.table {
+  height: $large-card-height;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}

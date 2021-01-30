@@ -1,0 +1,22 @@
+<div>
+  <label class="checkbox-input">
+    <input type="checkbox" [checked]="player.table.shared" (change)="toggleSharing($event)">
+    Share
+    <ng-container *ngIf="player.table.shared">({{player.name}})</ng-container>
+  </label>
+  <button (click)="add()">
+    Add opponent
+  </button>
+</div>
+<div *ngFor="let opponent of opponents">
+    <h3 class="heading">
+        {{opponent.name}}
+        <label>({{opponent.table.cards.length}})</label>
+        <button (click)="remove(opponent)">
+          Remove
+        </button>
+    </h3>
+    <div class="table">
+        <span class="card" *ngFor="let card of opponent.table.cards" [appCard]="card"></span>
+    </div>
+</div>

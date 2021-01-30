@@ -1,0 +1,7 @@
+@import "../../variables.scss";
+
+.player {
+  display: block;
+  float: left;
+  width: calc(75% - 10px);
+}

@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+
+:host {
+  display: block;
+  float: left;
+}
+
+.deck {
+  position: relative;
+  width: $large-card-width;
+  height: $large-card-height;
+  margin: 20px 0;
+
+  button {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    width: 83px;
+
+    &.face-down {
+      left: 20px;
+    }
+
+    &.to-table {
+      right: 20px;
+    }
+  }
+
+  &:hover button {
+    display: block;
+  }
+}

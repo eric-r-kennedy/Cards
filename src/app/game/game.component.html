@@ -1,0 +1,14 @@
+<div class="player">
+  <div>
+    <button (click)="shuffle()">
+      Shuffle deck
+    </button>
+    <button (click)="discard()" *ngIf="this.game.player.hand.length || this.game.player.table.cards.length">
+      Discard hand
+    </button>
+  </div>
+  <app-deck></app-deck>
+  <app-hand></app-hand>
+  <app-table></app-table>
+</div>
+<app-opponents></app-opponents>

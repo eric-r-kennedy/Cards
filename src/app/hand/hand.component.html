@@ -1,0 +1,13 @@
+<h2 class="heading"
+  *ngIf="player.hand.length">
+  Hand
+  <button (click)="sortBySuit()">
+    Sort by suit
+  </button>
+  <button (click)="sortByRank()">
+    Sort by rank
+  </button>
+</h2>
+<div class="hand">
+  <span class="card" *ngFor="let card of player.hand" (click)="putDown(card)" [appCard]="card"></span>
+</div>
