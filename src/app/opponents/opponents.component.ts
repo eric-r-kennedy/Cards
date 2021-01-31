@@ -56,6 +56,8 @@ export class OpponentsComponent implements OnInit {
       if (playerName) {
         this.player.name = playerName;
         this.share();
+      } else {
+        event.target.checked = false;
       }
     } else {
       this.unshare();
@@ -63,9 +65,7 @@ export class OpponentsComponent implements OnInit {
   }
 
   share(): void {
-    if (this.player.table.cards.length) {
-      this.gameService.shareCards(this.player.table.cards).subscribe();
-    }
+    this.gameService.shareCards(this.player.table.cards).subscribe();
     this.player.table.shared = true;
   }
 
